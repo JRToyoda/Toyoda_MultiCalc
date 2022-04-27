@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+        android:id="@+id/physics"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="284dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/physics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/geometry"
+        android:layout_width="250dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/geometry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/physics"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/physics"
+        app:layout_constraintTop_toBottomOf="@+id/physics"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/weight"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/weight"
+        app:layout_constraintEnd_toEndOf="@+id/force"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/force"
+        app:layout_constraintTop_toBottomOf="@+id/force" />
+
+    <Button
+        android:id="@+id/cylinder"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/cylinder"
+        app:layout_constraintEnd_toEndOf="@+id/sphere"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sphere"
+        app:layout_constraintTop_toBottomOf="@+id/sphere"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/density"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/density"
+        app:layout_constraintEnd_toEndOf="@+id/weight"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/weight"
+        app:layout_constraintTop_toBottomOf="@+id/weight" />
+
+    <Button
+        android:id="@+id/cone"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/cone"
+        app:layout_constraintEnd_toEndOf="@+id/cylinder"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cylinder"
+        app:layout_constraintTop_toBottomOf="@+id/cylinder"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/rectPrism"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/rectPrism"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/velocity"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="140dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/velocity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sphere"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/sphere"
+        app:layout_constraintEnd_toEndOf="@+id/rectPrism"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rectPrism"
+        app:layout_constraintTop_toBottomOf="@+id/rectPrism"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/voltage"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/voltage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/density"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/density"
+        app:layout_constraintTop_toBottomOf="@+id/density"
+        app:layout_constraintVertical_bias="0.2"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <Button
+        android:id="@+id/sqrPyramid"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/sqrPyramid"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cone"
+        app:layout_constraintTop_toBottomOf="@+id/cone"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <Button
+        android:id="@+id/force"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="@color/red"
+        android:text="@string/force"
+        app:layout_constraintEnd_toEndOf="@+id/velocity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/velocity"
+        app:layout_constraintTop_toBottomOf="@+id/velocity" />
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:background="@drawable/back"
+        android:text=""
+        app:backgroundTint="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
