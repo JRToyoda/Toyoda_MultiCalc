@@ -1,8 +1,9 @@
-package com.example.toyoda_physicscalculator;
+package com.example.toyoda_physicscalculator.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +11,18 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import com.example.toyoda_physicscalculator.Model.CalculatorModel;
+import com.example.toyoda_physicscalculator.R;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button physics, geometry, velocity, force, weight, density, voltage, rectPrism, sphere, cylinder, cone, sqrPyramid, back;
+    Button physics, geometry, velocity, force, weight, density, voltage, rectPrism, sphere, cylinder, cone, back;
 
+    CalculatorModel object = new CalculatorModel();
+
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,19 +43,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sphere = findViewById(R.id.sphere);
         cylinder = findViewById(R.id.cylinder);
         cone = findViewById(R.id.cone);
-        sqrPyramid = findViewById(R.id.sqrPyramid);
-        back = findViewById(R.id.back);
+        back = findViewById(R.id.back1);
 
         physics.setOnClickListener(this);
         geometry.setOnClickListener(this);
+        velocity.setOnClickListener(this);
+        force.setOnClickListener(this);
+        weight.setOnClickListener(this);
+        density.setOnClickListener(this);
+        velocity.setOnClickListener(this);
+        rectPrism.setOnClickListener(this);
+        sphere.setOnClickListener(this);
+        cylinder.setOnClickListener(this);
+        cone.setOnClickListener(this);
         back.setOnClickListener(this);
 
         start();
     }
 
-    @SuppressLint("NonConstantResourceId")
+
     @Override
+    @SuppressLint("NonConstantResourceId")
     public void onClick(View view) {
+        Intent physics = new Intent(MainActivity.this,PhysicsView.class);
+        Intent geometry = new Intent(MainActivity.this,GeometryView.class);
         switch (view.getId()) {
             case R.id.physics:
                 physics();
@@ -56,8 +74,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.geometry:
                 geometry();
                 break;
-            case R.id.back:
+            case R.id.back1:
                 start();
+                break;
+            case R.id.velocity:
+                object.setConcept("Velocity");
+                physics.putExtra("concept", object.getConcept());
+                startActivity(physics);
+                break;
+            case R.id.force:
+                object.setConcept("Force");
+                physics.putExtra("concept", object.getConcept());
+                startActivity(physics);
+                break;
+            case R.id.weight:
+                object.setConcept("Weight");
+                physics.putExtra("concept", object.getConcept());
+                startActivity(physics);
+                break;
+            case R.id.density:
+                object.setConcept("Density");
+                physics.putExtra("concept", object.getConcept());
+                startActivity(physics);
+                break;
+            case R.id.voltage:
+                object.setConcept("Voltage");
+                physics.putExtra("concept", object.getConcept());
+                startActivity(physics);
+                break;
+            case R.id.rectPrism:
+                object.setShape("RECTANGULAR PRISM");
+                geometry.putExtra("shape", object.getShape());
+                startActivity(geometry);
+                break;
+            case R.id.sphere:
+                object.setShape("SPHERE");
+                geometry.putExtra("shape", object.getShape());
+                startActivity(geometry);
+                break;
+            case R.id.cylinder:
+                object.setShape("CYLINDER");
+                geometry.putExtra("shape", object.getShape());
+                startActivity(geometry);
+                break;
+            case R.id.cone:
+                object.setShape("CONE");
+                geometry.putExtra("shape", object.getShape());
+                startActivity(geometry);
         }
     }
 
@@ -71,7 +134,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sphere.setVisibility(View.GONE);
         cylinder.setVisibility(View.GONE);
         cone.setVisibility(View.GONE);
-        sqrPyramid.setVisibility(View.GONE);
         physics.setVisibility(View.VISIBLE);
         geometry.setVisibility(View.VISIBLE);
         back.setVisibility(View.GONE);
@@ -87,7 +149,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sphere.setVisibility(View.GONE);
         cylinder.setVisibility(View.GONE);
         cone.setVisibility(View.GONE);
-        sqrPyramid.setVisibility(View.GONE);
         physics.setVisibility(View.GONE);
         geometry.setVisibility(View.GONE);
         back.setVisibility(View.VISIBLE);
@@ -103,7 +164,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sphere.setVisibility(View.VISIBLE);
         cylinder.setVisibility(View.VISIBLE);
         cone.setVisibility(View.VISIBLE);
-        sqrPyramid.setVisibility(View.VISIBLE);
         physics.setVisibility(View.GONE);
         geometry.setVisibility(View.GONE);
         back.setVisibility(View.VISIBLE);

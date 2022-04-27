@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Toyoda_PhysicsCalculator">
         <activity
-            android:name=".MainActivity"
+            android:name=".View.PhysicsView"
+            android:exported="false" />
+        <activity
+            android:name=".View.GeometryView"
+            android:exported="false" />
+        <activity
+            android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
