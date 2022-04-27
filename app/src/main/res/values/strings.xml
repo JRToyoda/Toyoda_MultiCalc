@@ -11,7 +11,6 @@
     <string name="density">DENSITY</string>
     <string name="cone">CONE</string>
     <string name="voltage">VOLTAGE</string>
-    <string name="sqrPyramid">SQUARE PYRAMID</string>
     <string name="formula">Acceleration</string>
     <string name="input">Input Number…</string>
     <string name="calculate">Calculate</string>

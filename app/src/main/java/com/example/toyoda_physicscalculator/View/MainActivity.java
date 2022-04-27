@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         force.setOnClickListener(this);
         weight.setOnClickListener(this);
         density.setOnClickListener(this);
-        velocity.setOnClickListener(this);
+        voltage.setOnClickListener(this);
         rectPrism.setOnClickListener(this);
         sphere.setOnClickListener(this);
         cylinder.setOnClickListener(this);
